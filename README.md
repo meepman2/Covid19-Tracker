@@ -2,4 +2,5 @@
 International Covid19 tracker application 
 
 Website link - https://meepman2.github.io/Covid19-Tracker/
+<br />
 API link - https://covid19.mathdro.id/api/
