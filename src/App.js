@@ -8,26 +8,26 @@ import Graph from "./components/Graph";
 import "./styling/styles.css";
 
 function App() {
-    const [selectedCountry, setselectedCountry] = useState("");
+  const [selectedCountry, setselectedCountry] = useState("");
 
-    const handleCountryChange = (country) => {
-        if (country === "Global") {
-            setselectedCountry("");
-        } else {
-            setselectedCountry("countries/" + country);
-        }
-    };
+  const handleCountryChange = country => {
+    if (country === "Global") {
+      setselectedCountry("");
+    } else {
+      setselectedCountry("countries/" + country);
+    }
+  };
 
-    return (
-        <div>
-            <Header />
-            <Banner country={selectedCountry} />
-            <SearchBar select={handleCountryChange} />
-            <Card location={selectedCountry} />
-            <Graph country={selectedCountry} />
-            <Footer />
-        </div>
-    );
+  return (
+    <div>
+      <Header />
+      <Banner country={selectedCountry} />
+      <SearchBar select={handleCountryChange} />
+      <Card location={selectedCountry} />
+      <Graph country={selectedCountry} />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
